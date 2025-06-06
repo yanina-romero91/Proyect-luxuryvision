@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Inventario - Luxury Visión</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <img src="img/logo2.png" width="150" height="80" class="d-inline-block align-top" alt="Logo">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="registroCliente.html">Registro Cliente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registroCitas.html">Registro Citas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gestionInventario.html">Gestión de Inventario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reportes.html">Reportes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">Gestión de Inventario</h4>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-3">
+                                    <label class="form-label">Código del Producto</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label">Nombre del Producto</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label">Categoría</label>
+                                    <select class="form-select">
+                                        <option value="">Seleccionar...</option>
+                                        <option>Monturas</option>
+                                        <option>Lentes</option>
+                                        <option>Accesorios</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label">Cantidad Disponible</label>
+                                    <input type="number" class="form-control" min="0">
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label">Precio</label>
+                                    <input type="number" class="form-control" min="0" step="0.01">
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label">Proveedor</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label">Fecha de Entrada</label>
+                                    <input type="date" class="form-control">
+                                </div>
+                                <div class="col-12 text-end">
+                                    <button type="reset" class="btn btn-secondary me-2">Limpiar</button>
+                                    <button type="submit" class="btn btn-primary">Registrar Producto</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                        <h4 class="mb-0">Listado de Productos en Inventario</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Código</th>
+                                        <th>Producto</th>
+                                        <th>Categoría</th>
+                                        <th>Cantidad</th>
+                                        <th>Precio</th>
+                                        <th>Proveedor</th>
+                                        <th>Fecha de Entrada</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>001</td>
+                                        <td>Montura de Acetato</td>
+                                        <td>Monturas</td>
+                                        <td>50</td>
+                                        <td>S/ 120.00</td>
+                                        <td>Ópticas SA</td>
+                                        <td>01/12/2024</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-info">Ver</button>
+                                            <button class="btn btn-sm btn-success">Editar</button>
+                                            <button class="btn btn-sm btn-danger">Eliminar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>002</td>
+                                        <td>Lentes Oftálmicos</td>
+                                        <td>Lentes</td>
+                                        <td>100</td>
+                                        <td>S/ 150.00</td>
+                                        <td>Ópticas Lima</td>
+                                        <td>10/11/2024</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-info">Ver</button>
+                                            <button class="btn btn-sm btn-success">Editar</button>
+                                            <button class="btn btn-sm btn-danger">Eliminar</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <nav aria-label="Page navigation" class="mt-4">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Anterior</a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Siguiente</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-5 py-3 bg-light">
+        <div class="container text-center">
+            <span class="text-muted">© 2025 Luxury Visión. Todos los derechos reservados.</span>
+        </div>
+    </footer>
+</body>
+</html>

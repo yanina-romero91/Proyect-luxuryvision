@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Luxury Visión</title>
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="login-page">
+    <div class="login-background"></div>
+    <div class="container">
+        <div class="row justify-content-center min-vh-100 align-items-center">
+            <div class="col-md-5">
+                <div class="card login-card">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-4">
+                            <img src="img/logo.png" alt="Luxury Visión Logo" class="mb-3" style="max-width: 200px;">
+                            <h4 class="text-primary fw-bold">Luxury Visión</h4>
+                            <p class="text-muted">Sistema de Gestión Óptica</p>
+                        </div>
+                        <form action="registroCliente.html" method="POST">
+                            <div class="mb-4">
+                                <label class="form-label">Usuario</label>
+                                <input type="text" name="usuario" class="form-control form-control-lg" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label">Contraseña</label>
+                                <input type="password" name="password" class="form-control form-control-lg" required>
+                            </div>
+                            <div class="mb-4 form-check">
+                                <input type="checkbox" class="form-check-input" id="remember">
+                                <label class="form-check-label" for="remember">Recordar sesión</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg w-100 mb-3">Ingresar al Sistema</button>
+                            <div class="text-center">
+                                <a href="#" class="text-muted text-decoration-none">¿Olvidaste tu contraseña?</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
